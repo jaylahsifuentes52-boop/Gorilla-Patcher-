@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111318">
+  <title>Gorilla Patcher — Community Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" data-page="home">
+        <span class="brand-icon">GP</span>
+        <span><strong>Gorilla Patcher</strong><small>COMMUNITY HUB</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav>
+        <button class="nav-item active" data-page="home"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-page="verification"><span>▣</span> Headset Verification</button>
+        <button class="nav-item" data-page="tools"><span>⚙</span> Tools &amp; Options</button>
+        <button class="nav-item" data-page="gallery"><span>▧</span> Picture Gallery <b id="nav-count">3</b></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><strong>Website preview</strong><small>Local demo · No account connected</small></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><div class="eyebrow">GORILLA PATCHER / WEBSITE</div><h1 id="page-title">Overview</h1></div>
+        <span class="version-pill">VERSION 1.16.11.0</span>
+      </header>
+
+      <section class="page active" id="home">
+        <div class="welcome-card">
+          <div class="welcome-copy">
+            <span class="tag">COMMUNITY PROJECT</span>
+            <h2>Your Gorilla Patcher<br><em>picture hub.</em></h2>
+            <p>A website-style home for your screenshots, project updates, and information. Add your own pictures to the gallery whenever you want.</p>
+            <button class="primary-btn" data-go="gallery">＋ Add pictures</button>
+          </div>
+          <div class="welcome-art"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="art-card"><span>GP</span><small>PATCHER HUB</small><strong>01</strong></div></div>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">YOUR CONTENT</span><h2>Recent pictures</h2></div><button class="text-btn" data-go="gallery">View gallery →</button></div>
+        <div class="photo-grid compact" id="recent-grid"></div>
+        <div class="info-strip"><span class="info-icon">ⓘ</span><div><strong>Website preview</strong><p>This is a front-end gallery and information page. It does not sign in to Meta or modify Gorilla Tag files.</p></div></div>
+      </section>
+
+      <section class="page" id="verification">
+        <div class="panel intro-panel"><span class="panel-icon">▣</span><div><h2>Headset Verification</h2><p>A place to show your headset status and related screenshots.</p></div><span class="state-badge">DEMO PAGE</span></div>
+        <div class="panel"><h3>Headset information</h3><div class="detail-row"><span>Verification status</span><strong class="green-text">Preview only</strong></div><div class="detail-row"><span>Headset ID</span><strong>Not connected</strong></div><div class="detail-row"><span>Account status</span><strong>Not signed in</strong></div><p class="muted small-note">This website does not collect headset IDs, passwords, access tokens, or verification codes.</p></div>
+      </section>
+
+      <section class="page" id="tools">
+        <div class="panel intro-panel"><span class="panel-icon">⚙</span><div><h2>Tools &amp; Options</h2><p>Project information inspired by your reference pictures.</p></div></div>
+        <div class="tool-grid">
+          <article class="panel tool-card"><span class="tool-symbol">⌁</span><h3>Patch access</h3><p>Reference information for your project. No patching action is performed by this website.</p><span class="state-badge">INFO ONLY</span></article>
+          <article class="panel tool-card"><span class="tool-symbol">▤</span><h3>Backup cache</h3><p>Use the original app's official guidance for backups. This button is not connected to your headset.</p><span class="state-badge">INFO ONLY</span></article>
+          <article class="panel tool-card"><span class="tool-symbol">▧</span><h3>Project pictures</h3><p>Keep screenshots and updates together in your personal gallery.</p><button class="secondary-btn" data-go="gallery">Open gallery</button></article>
+        </div>
+      </section>
+
+      <section class="page" id="gallery">
+        <div class="gallery-head"><div><span class="eyebrow">YOUR COLLECTION</span><h2>Picture Gallery</h2><p class="muted">Your included screenshots plus any pictures you add.</p></div><label class="primary-btn upload-btn">＋ Upload pictures<input id="file-input" type="file" accept="image/*" multiple></label></div>
+        <div class="gallery-tools"><span id="photo-count">3 pictures</span><span class="muted">Images you add are saved in this browser on this device.</span></div>
+        <div class="photo-grid" id="gallery-grid"></div>
+      </section>
+
+      <footer>GORILLA PATCHER HUB <span>•</span> Made as a website preview</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
